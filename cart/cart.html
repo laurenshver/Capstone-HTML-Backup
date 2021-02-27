@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/08e9ccd70e.js" crossorigin="anonymous"></script>
+    <title>Order</title>
+</head>
+
+<body>
+    <a href="#" class="back-button"><i class="fas fa-chevron-left"></i> Return to Tool Catalogue</a>
+    <h1>New Order</h1>
+    <div class="row">
+        <div class="column-three-q">
+            <p class="header">Tools</p>
+        </div>
+        <div class="column-4">
+            <p class="header">Summary</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-three-q">
+            <div class="details">
+                <div class="row">
+                    <div class="column-5">
+                        <img src="placeholder.png" alt="tool"><br><br>
+                        <button class="remove-button">Remove</button>
+                    </div>
+                    <div class="column-5">
+                        <p><strong>Tool Name</strong></p>
+                        <p><strong>Tool Brand</strong></p>
+                        <p><strong>Inventory ID</strong><br>3</p>
+                        <p><strong>Tool Condition</strong><br><span style="color: green;">Good</span></p>
+                    </div>
+                    <div class="column-5">
+                        <p><strong>Start Date</strong><br>Oct. 12 2002</p>
+                        <p><strong>Start Time</strong><br>7:00AM</p>
+                        <p><strong>End Date</strong><br>Oct. 26 2002</p>
+                        <p><strong>End Time</strong><br>5:00PM</p>
+                    </div>
+                    <div class="column-5">
+                        <p><strong>Rental Length</strong><br>2</p>
+                        <p><strong>Rental Rate</strong><br>Weeks</p>
+                        <p><strong>Price</strong><br>$20.50/week</p>
+                    </div>
+                    <div class="column-5">
+                        <p class="price">$41.00</p>
+                    </div>
+                </div>
+                <!-- <br>
+                <hr style="background-color: lightgray;height: 1px; border-width: 0;">
+                <br> -->
+            </div>
+        </div>
+        <div class="column-4">
+            <div class="details">
+                <div class="row">
+                    <div class="column-2" style="text-align: left; font-weight: bold;">
+                        <p>Quote ID</p>
+                        <p>Subtotal</p>
+                        <p>Taxes</p>
+                        <p>Procurement</p>
+                        <p>Deposit (10%)</p>
+                        <p>Business Discount</p>
+                        <hr>
+                        <p>Total</p>
+                    </div>
+                    <div class="column-2" style="text-align: right;">
+                        <p>None</p>
+                        <p>$41.00</p>
+                        <p>TBD</p>
+                        <p>TBD</p>
+                        <p>$4.10</p>
+                        <p style="color: red;">$3.50</p>
+                        <hr>
+                        <p><strong>$50.43</strong></p>
+                    </div>
+                </div>
+                <button class = "next-page-button"style="width: 100%;" onclick="location.href='select_customer.html'" type="button">Assign Customer</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

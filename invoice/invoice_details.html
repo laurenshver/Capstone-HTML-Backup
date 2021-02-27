@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Details</title>
+    <script src="https://kit.fontawesome.com/08e9ccd70e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="invoice_details.css">
+    <link rel="stylesheet" href="../cart/main.css">
+    <script>
+        function getTotal(classname) {
+            var nodes = document.getElementsByClassName(classname);
+            var sum = 0;
+            for (i = 0; i < nodes.length; i++) {
+                sum = sum + parseFloat(nodes[i].textContent);
+
+            }
+            
+            return sum.toFixed(2);
+        }
+
+        function getOutstandingBalance() {
+            var invoice_total = document.getElementById('invoice-total');
+            var paid_amount = document.getElementById('paid-amount');
+            var num = paid_amount.textContent.match(/\d+/g);
+            var paid = parseFloat(num[0] + "." + num[1]);
+            var total = parseFloat(invoice_total.textContent);
+            var outstanding = total - paid;
+            return outstanding.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="invoice.html" class="back-button"><i class="fas fa-chevron-left"></i> Return to Invoices</a>
+    <h1>Invoice Details</h1>
+    <div class="details">
+        <div class="row">
+            <div class="column-3">
+                <p class="detail-header">Invoice Summary</p>
+                <div class="column-3" style="font-weight: bold;">
+                    <p>Invoice ID</p>
+                    <p>Invoice Status</p>
+                    <p>Due Date</p>
+                </div>
+                <div class="column-2">
+                    <p>123</p>
+                    <p>Payment Pending</p>
+                    <p>November 2, 2002 (13 days)</p>
+                </div>
+
+            </div>
+            <div class="column-3">
+                <p class="detail-header">Customer Information</p>
+                <div class="column-3" style="font-weight: bold;">
+                    <p>Customer Name</p>
+                    <p>Phone Number</p>
+                    <p>Address</p>
+                </div>
+                <div class="column-2">
+                    <p>FirstName LastName</p>
+                    <p>(647)-123-4560</p>
+                    <p>123 Sesame Street <br> Toronto, ON <br>M3K 4R5</p>
+                </div>
+
+            </div>
+            <div class="column-3">
+                <p class="detail-header">Cost Breakdown</p>
+                <div class="column-2" style="text-align: left; font-weight: bold;">
+                    <p>Subtotal</p>
+                    <p>Taxes</p>
+                    <p>Deposit (10%)</p>
+                    <hr>
+                    <p>Total</p>
+                </div>
+                <div class="column-2" style="text-align: right;">
+                    <p>$41.00</p>
+                    <p>$5.40</p>
+                    <p>$4.10</p>
+                    <hr>
+                    <p style="font-weight: bold;">$50.73</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr style="border: 1px #e9ecef solid;">
+        <br>
+        <div class="row">
+            <div class="column-2">
+                <p class="detail-header">Orders in Invoice</p>
+                <br>
+                <table>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Order Total</th>
+                        <th>End Date</th>
+                        <th>Details</th>
+                    </tr>
+                    <!-- payemnt loop -->
+                    <tr>
+                        <td>123</td>
+                        <td>78.00</td>
+                        <td>October 22, 2002</td>
+                        <td><a href="#"><i class="fas fa-chevron-right"></i></a></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="column-2">
+                <p class="detail-header">Payments</p>
+                <br>
+                
+                <table>
+                    <tr>
+                        <th>Payment Date</th>
+                        <th>Payment Method</th>
+                        <th>Amount</th>
+                    </tr>
+                    <!-- payemnt loop -->
+                    <tr>
+                        <td>October 23, 2002</td>
+                        <td>VISA</td>
+                        <td class="payment-amount">32.10</td>
+                    </tr>
+                    <!-- end payment loop -->
+                </table>
+                <br><br>
+                
+
+                <table>
+                    <tr>
+                        <th>Invoice Total</th>
+                        <td>$<span id="invoice-total">50.73</span></td>
+                    </tr>
+                    <tr>
+                        <th>Paid Amount</th>
+                        <td>$<span id="paid-amount"><script type="text/javascript">document.write(getTotal('payment-amount'))</script></span></td>
+                    </tr>
+                    <tr>
+                        <th>Outstanding Balance</th>
+                        <td style="color: red;">$<script type="text/javascript">document.write(getOutstandingBalance())</script></td>
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

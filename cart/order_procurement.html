@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Procurement</title>
+    <link rel="stylesheet" href="order_procurement.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/08e9ccd70e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[type='radio']").click(function () {
+                var radioValue = $("input[name='tool-retrival']:checked").val();
+                if (radioValue == "delivery") {
+                    $("#delivery-address").toggle();
+                    $("#pickup-address").toggle(false);
+                } else {
+                    $("#pickup-address").toggle();
+                    $("#delivery-address").toggle(false);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <a href="select_customer.html" class="back-button"><i class="fas fa-chevron-left"></i> Return to Customer Selection</a>
+    <h1>Order Procurement</h1>
+    <div class="row">
+        <div class="column-2">
+            <p class="header">Retreival Type</p>
+        </div>
+        <div class="column-2">
+            <p class="header">Order Summary</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-2">
+            <div class="details">
+                <p class="detail-header">Delivery or Pickup?</p>
+                <div class="procurement">
+                    <form action="#">
+                        <div class="column-2">
+                            <input type="radio" name="tool-retrival" id="delivery" value="delivery">
+                            <label for="delivery">Delivery</label><br>
+                        </div>
+                        <input type="radio" name="tool-retrival" id="pickup" value="pickup">
+                        <label for="pickup">Pickup In Store</label><br>
+                    </form>
+                </div>
+            </div>
+            <!-- delivery address form toggle-->
+            <div id="delivery-address">
+                <div class="row">
+                    <div>
+                        <div class="details">
+                            <p class="detail-header">Delivery Address</p><br>
+                            <form action="#" method="post">
+                                <label for="customer-address">Use Customer Address</label>
+                                <input type="checkbox" name="customer-address" id="customer-address"><br>
+                                <p class="detail-header" style="color: red;">or</p>
+                                <input type="text" name="address" id="apartment" placeholder="Apt, Suite, etc."><br>
+                                <input type="text" name="address" id="address" placeholder="123 Easy Street"><br>
+                                <input type="text" name="address" id="city" placeholder="City"><br>
+                                <select name="address" id="province"><br>
+                                    <option value="" selected disabled hidden>Select Province</option>
+                                    <option value="AB">Alberta</option>
+                                    <option value="BC">British Columbia</option>
+                                    <option value="MB">Manitoba</option>
+                                    <option value="NB">New Brunswick</option>
+                                    <option value="NL">Newfoundland and Labrador</option>
+                                    <option value="NS">Nova Scotia</option>
+                                    <option value="ON">Ontario</option>
+                                    <option value="PE">Prince Edward Island</option>
+                                    <option value="QC">Quebec</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="NT">Northwest Territories</option>
+                                    <option value="NU">Nunavut</option>
+                                    <option value="YT">Yukon</option>
+                                </select><br>
+                                <input type="text" name="address" id="postalcode" placeholder="Postal Code"><br>
+                                <input type="text" name="address" id="phonenumber" placeholder="123-456-7890"><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- display pickup address toggle -->
+            <div id="pickup-address">
+                <div class="row">
+                    <div>
+                        <div class="details">
+                            <p class="detail-header">Pickup Address</p><br>
+                            <span style="text-align: center;">
+                                <p><strong>Store Name</strong></p>
+                                <p>Store Address</p>
+                                <p>Store City</p>
+                                <p>Store Postal Code</p>
+                                <p>Store Phone Number</p>
+                            </span>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column-2">
+            <div class="details">
+                <div class="row" style="text-align: center;">
+                    <strong>Customer Information</strong><br>
+                    <!-- 3 columns about patron -->
+                    <div class="column-3">
+                        <p>FirstName LastName</p>
+                    </div>
+                    <div class="column-3">
+                        <p>Phone Number</p>
+                    </div>
+                    <div class="column-3">
+                        <p>Postal Code</p>
+                    </div>
+                    <!-- 3 columns about business -->
+                    <!-- <div class="column-3">
+                        <p>Business Name</p>
+                    </div>
+                    <div class="column-3">
+                        <p>Business Contact Name</p>
+                    </div>
+                    <div class="column-3">
+                        <p>Business Contact Role</p>
+                    </div> -->
+                </div>
+                <br>
+                <div class="row" style="text-align: center;">
+                    <strong>Start & End Dates</strong><br>
+                    <div class="column-4">
+                        <p>Earliest Start Date</p>
+                        <p>Latest End Date</p>
+                    </div>
+                    <div class="column-4">
+                        <p>Oct. 12, 2002</p>
+                        <p>Oct. 29, 2002</p>
+                    </div>
+                    <div class="column-4">
+                        <p>Earliest Start Time</p>
+                        <p>Latest End Time</p>
+                    </div>
+                    <div class="column-4">
+                        <p>7:00AM</p>
+                        <p>5:00PM</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-2" style="text-align: left; font-weight: bold;">
+                        <p>Quote ID</p>
+                        <p>Subtotal</p>
+                        <p>Taxes</p>
+                        <p>Procurement</p>
+                        <p>Deposit (10%)</p>
+                        <p>Business Discount</p>
+                        <hr>
+                        <p>Total</p>
+                    </div>
+                    <div class="column-2" style="text-align: right;">
+                        <p>None</p>
+                        <p>$41.00</p>
+                        <p>$5.40</p>
+                        <p>TBD</p>
+                        <p>$4.10</p>
+                        <p style="color: red;">$3.50</p>
+                        <hr>
+                        <p><strong>$50.43</strong></p>
+                    </div>
+                </div>
+                <button class="next-page-button" style="width: 100%;" onclick="location.href='complete_order.html'" type="button">Review Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

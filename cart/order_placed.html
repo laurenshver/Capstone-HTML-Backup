@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed</title>
+    <link rel="stylesheet" href="order_placed.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/08e9ccd70e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Order Placed!</h1>
+    <div class="row">
+        <p class="header">Order Summary</p>
+        <p style="text-align: center; text-decoration: underline;">Invoice must be generated within 3 business days</p>
+    </div>
+    <div class="row">
+        <div class="details">
+            <div class="row" style="text-align: center;">
+                <strong>Customer Information</strong><br>
+                <!-- 3 columns about patron -->
+                <div class="column-3">
+                    <p>FirstName LastName</p>
+                </div>
+                <div class="column-3">
+                    <p>Phone Number</p>
+                </div>
+                <div class="column-3">
+                    <p>Postal Code</p>
+                </div>
+                <!-- 3 columns about business -->
+                <!-- <div class="column-3">
+                    <p>Business Name</p>
+                </div>
+                <div class="column-3">
+                    <p>Business Contact Name</p>
+                </div>
+                <div class="column-3">
+                    <p>Business Contact Role</p>
+                </div> -->
+            </div>
+            <br>
+            <div class="row" style="text-align: center;">
+                <div class="column-2">
+                    <strong>Start & End Date/Time</strong><br>
+                </div>
+                <div class="column-2">
+                    <strong>Procurement</strong><br>
+                </div>
+                <div class="row">
+                    <div class="column-8">
+                        <p>Earliest Start Date</p>
+                        <p>Latest End Date</p>
+                    </div>
+                    <div class="column-8">
+                        <p>Oct. 12, 2002</p>
+                        <p>Oct. 29, 2002</p>
+                    </div>
+                    <div class="column-8">
+                        <p>Earliest Start Time</p>
+                        <p>Latest End Time</p>
+                    </div>
+                    <div class="column-8">
+                        <p>7:00AM</p>
+                        <p>5:00PM</p>
+                    </div>
+                    <div class="column-4">
+                        <p>Delivery</p>
+                    </div>
+                    <div class="column-4">
+                        <p>123 East Street</p>
+                        <p>Toronto, ON, Canada</p>
+                        <p>Postal Code</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row" style="text-align: center;">
+                <div class="column-2">
+                    <strong>Summary of Charges</strong>
+                </div>
+                <div class="column-2">
+                    <strong>Order Notes</strong>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column-4" style="text-align: left; font-weight: bold;">
+                    <p>Number of Tools</p>
+                    <p>Subtotal</p>
+                    <p>Taxes</p>
+                    <p>Procurement</p>
+                    <p>Deposit (10%)</p>
+                    <p>Business Discount</p>
+                    <hr>
+                    <p>Total</p>
+                </div>
+                <div class="column-4" style="text-align: right;">
+                    <p>1</p>
+                    <p>$41.00</p>
+                    <p>$5.40</p>
+                    <p>Delivery</p>
+                    <p>$4.10</p>
+                    <p style="color: red;">$3.50</p>
+                    <hr>
+                    <p><strong>$50.43</strong></p>
+                </div>
+                <div class="column-2" style="text-align: center;">
+                    <pre>These are the notes for this order
+                        This text is in the preformatted tags.</pre>
+                </div>
+            </div>
+            <button class="next-page-button" style="width: 100%;">Generate an Invoice</button><br><br>
+            <button class="remove-button" style="width: 100%;">Order List</button>
+        </div>
+    </div>
+</body>
+
+</html>

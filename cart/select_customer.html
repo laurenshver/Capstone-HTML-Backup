@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Customer</title>
+    <link rel="stylesheet" href="select_customer.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/08e9ccd70e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        function myFunction() {
+            var input = document.getElementById("search");
+            var filter = input.value.toLowerCase();
+            var x = document.getElementsByClassName('target');
+            var nodes = document.getElementsByClassName('target');
+
+            for (i = 0; i < nodes.length; i++) {
+                if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                    nodes[i].style.display = "block";
+                } else {
+                    nodes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="cart.html" class="back-button"><i class="fas fa-chevron-left"></i> Return to Order</a>
+    <h1>Select Customer</h1>
+    <div class="row">
+        <div class="column-8" style="visibility: hidden;">hidden</div>
+        <div class="column-three-q">
+            <p class="header">Selected Customer</p>
+            <div class="details">
+                <div class="row" style="text-align: center;">
+                    <!-- 4 columns about patron -->
+                    <!-- <div class="column-5">
+                        <p>FirstName LastName</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Phone Number</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Postal Code</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Rating</p>
+                    </div> -->
+                    <!-- business details -->
+                    <div class="column-5">
+                        <p>Business Name</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Business Contact</p>
+
+                    </div>
+                    <div class="column-5">
+                        <p>Business Contact Number <br> Business Contact Role</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Rating</p>
+                    </div>
+                    <div class="column-5">
+                        <br>
+                        <button class="next-page-button" onclick="location.href='order_procurement.html'" type="button">Select Procurement</button>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <p class="header">Customer Search</p>
+            <form action="#" class="searchform">
+                <input type="search" name="search" id="search" class="searchbox" onkeyup="myFunction()">
+                <button type="submit" class="searchbutton"><i class="fa fa-search"></i></button>
+            </form>
+
+            <br>
+            <div class="details">
+                <div class="row" style="text-align: center; border-bottom: 1px #e9ecef solid;">
+                    <div class="target">
+                        <!-- 4 columns about patron -->
+                        <!-- <div class="column-5">
+                        <p>FirstName LastName</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Phone Number</p><br>
+                    </div>
+                    <div class="column-5">
+                        <p>Postal Code</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Rating</p>
+                    </div> -->
+                        <!-- business details -->
+                        <div class="column-5">
+                            <p>Business Name</p>
+                        </div>
+                        <div class="column-5">
+                            <p>Business Contact</p>
+
+                        </div>
+                        <div class="column-5">
+                            <p>Business Contact Number <br> Business Contact Role</p>
+                        </div>
+                        <div class="column-5">
+                            <p>Rating</p>
+                        </div>
+                        <div class="column-5">
+                            <br>
+                            <button class="select-customer-button">Select Customer</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="text-align: center; border-bottom: 1px #e9ecef solid;">
+                    <div class="target">
+                        <div class="column-5">
+                            <p>FirstName LastName</p>
+                        </div>
+                        <div class="column-5">
+                            <p>Phone Number</p>
+                            <br>
+                        </div>
+                        <div class="column-5">
+                            <p>Postal Code</p>
+                        </div>
+                        <div class="column-5">
+                            <p>Rating</p>
+                        </div>
+                        <!-- business details -->
+                        <!-- <div class="column-5">
+                        <p>Business Name</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Business Contact</p>
+                        
+                    </div>
+                    <div class="column-5">
+                        <p>Business Contact Number <br> Business Contact Role</p>
+                    </div>
+                    <div class="column-5">
+                        <p>Rating</p>
+                    </div> -->
+                        <div class="column-5">
+                            <br>
+                            <button class="select-customer-button">Select Customer</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+    <div class="column-8" style="visibility: hidden;">hidden</div>
+    </div>
+</body>
+
+</html>
