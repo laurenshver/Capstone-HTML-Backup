@@ -41,30 +41,38 @@
         <div class="row">
             <div class="column-3">
                 <p class="detail-header">Invoice Summary</p>
-                <div class="column-3" style="font-weight: bold;">
-                    <p>Invoice ID</p>
-                    <p>Invoice Status</p>
-                    <p>Due Date</p>
-                </div>
-                <div class="column-2">
-                    <p>123</p>
-                    <p>Payment Pending</p>
-                    <p>November 2, 2002 (13 days)</p>
-                </div>
+                <table class="invoice-details">
+                    <tr>
+                        <th>Invoice ID</th>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <th>Invoice Status</th>
+                        <td>Payment Pending</td>
+                    </tr>
+                    <tr>
+                        <th>Due Date</th>
+                        <td>November 2, 2002 (13 days)</td>
+                    </tr>
+                </table>
 
             </div>
             <div class="column-3">
                 <p class="detail-header">Customer Information</p>
-                <div class="column-3" style="font-weight: bold;">
-                    <p>Customer Name</p>
-                    <p>Phone Number</p>
-                    <p>Address</p>
-                </div>
-                <div class="column-2">
-                    <p>FirstName LastName</p>
-                    <p>(647)-123-4560</p>
-                    <p>123 Sesame Street <br> Toronto, ON <br>M3K 4R5</p>
-                </div>
+                <table class="invoice-details">
+                    <tr>
+                        <th>Customer Name</th>
+                        <td>FirstName LastName</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>(647)-123-4560</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>123 Sesame Street <br> Toronto, ON <br>M3K 4R5</td>
+                    </tr>
+                </table>
 
             </div>
             <div class="column-3">
@@ -130,7 +138,7 @@
                 <br><br>
                 
 
-                <table>
+                <table class="outstanding-balance">
                     <tr>
                         <th>Invoice Total</th>
                         <td>$<span id="invoice-total">50.73</span></td>
@@ -141,7 +149,7 @@
                     </tr>
                     <tr>
                         <th>Outstanding Balance</th>
-                        <td style="color: red;">$<script type="text/javascript">document.write(getOutstandingBalance())</script></td>
+                        <td class="bottom-line">$<script type="text/javascript">document.write(getOutstandingBalance())</script></td>
                     </tr>
                 </table>
 

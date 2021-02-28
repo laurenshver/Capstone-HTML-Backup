@@ -78,3 +78,27 @@ td{
     border-top: #d0d2d4 1px solid;
     
 }
+
+.invoice-details{
+    width:100%;
+    text-align: left;
+
+}
+
+.invoice-details td{
+    border: none;
+}
+
+.outstanding-balance th{
+    text-align: right;
+    /* border-bottom: 1px solid black; */
+}
+
+.outstanding-balance td{
+    border:none;
+    border-bottom: 1px solid black;
+}
+
+.outstanding-balance .bottom-line{
+    border-bottom: 4px double red;
+}
